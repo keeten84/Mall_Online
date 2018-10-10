@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# 用自定义的userprofile表代替系统的user表
+AUTH_USER_MODEL = 'Users.UserProfile'
 
 # Application definition
 
