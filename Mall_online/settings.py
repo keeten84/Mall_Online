@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # 用自定义的userprofile表代替系统的user表
-AUTH_USER_MODEL = 'Users.UserProfile'
+AUTH_USER_MODEL = 'users.UserProfile'
 
 # Application definition
 
@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'goods',
+    'operations',
+    'transaction',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
