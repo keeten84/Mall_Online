@@ -63,8 +63,8 @@ class Goods(models.Model):
                               imagePath='goods/images/', filePath='goods/files/', default='')
     goods_front_image = models.ImageField('封面图', upload_to='', null=True, blank=True)
     ship_free = models.BooleanField('是否免邮', default=True)
-    is_new_product = models.BooleanField('是否新品', default=False)
-    is_hot_product = models.BooleanField('是否热卖', default=False)
+    is_new = models.BooleanField('是否新品', default=False)
+    is_hot = models.BooleanField('是否热卖', default=False)
 
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
