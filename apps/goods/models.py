@@ -85,7 +85,7 @@ class GoodsImage(models.Model):
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:
-        verbose_name = '商品图片'
+        verbose_name = '商品的图片'
         verbose_name_plural = verbose_name
 
     def __str__(self):
@@ -100,7 +100,7 @@ class Banner(models.Model):
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:
-        verbose_name = '商品图片'
+        verbose_name = '轮播图'
         verbose_name_plural = verbose_name
 
     def __str__(self):

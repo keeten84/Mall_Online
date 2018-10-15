@@ -18,13 +18,17 @@ from .models import Goods, GoodsCategory, GoodsImage, GoodsCategoryBrand, Banner
 # from .models import IndexAd
 
 class GoodsCategoryAdmin(object):
-    list_display = ["name", "category_type", "parent_category", "add_time"]
-    list_filter = ["category_type", "parent_category", "name"]
-    search_fields = ['name', ]
+    list_display = ["name", 'code', 'desc', "category_type", "parent_category", 'is_tab', "add_time"]
+    search_fields = ["name", 'code', 'desc', "category_type", "parent_category", 'is_tab']
+    list_filter = ["name", 'code', 'desc', "category_type", "parent_category", 'is_tab', "add_time"]
+    model_icon = 'fa fa-hand-pointer-o'
 
 
 class GoodsCategoryBrandAdmin(object):
-    list_display = ["category", "image", "name", "desc"]
+    list_display = ["category", "name", "desc", "image", 'add_time']
+    search_fields = ["category", "name", "desc", "image"]
+    list_filter = ["category", "name", "desc", "image", 'add_time']
+    model_icon = 'fa fa-bandcamp'
 
     def get_context(self):
         context = super(GoodsCategoryBrandAdmin, self).get_context()
@@ -34,13 +38,23 @@ class GoodsCategoryBrandAdmin(object):
 
 
 class GoodsAdmin(object):
-    list_display = ["name", "click_num", "sold_num", "fav_num", "goods_num", "market_price",
-                    "shop_price", "goods_brief", "goods_desc", "is_new", "is_hot", "add_time"]
-    search_fields = ['name', ]
+    list_display = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
+                    'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+                    'ship_free', 'is_new', 'is_hot', 'add_time']
+
+    search_fields = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
+                     'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+                     'ship_free', 'is_new', 'is_hot']
+
+    list_filter = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
+                   'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+                   'ship_free', 'is_new', 'is_hot', 'add_time']
+
     list_editable = ["is_hot", ]
-    list_filter = ["name", "click_num", "sold_num", "fav_num", "goods_num", "market_price",
-                   "shop_price", "is_new", "is_hot", "add_time", "category__name"]
+
     style_fields = {"goods_desc": "ueditor"}
+
+    model_icon = 'fa fa-sitemap'
 
     class GoodsImagesInline(object):
         model = GoodsImage
@@ -51,8 +65,18 @@ class GoodsAdmin(object):
     inlines = [GoodsImagesInline]
 
 
+class GoodsImageAdmin(object):
+    list_display = ["goods", "image", "image_url", 'add_time']
+    search_fields = ["goods", "image", "image_url"]
+    list_filter = ["goods", "image", "image_url", 'add_time']
+    model_icon = 'fa fa-file-image-o'
+
+
 class BannerAdmin(object):
-    list_display = ["goods", "image", "index"]
+    list_display = ["goods", "image", "index", 'add_time']
+    search_fields = ["goods", "image", "index"]
+    list_filter = ["goods", "image", "index", 'add_time']
+    model_icon = 'fa fa-image'
 
 
 # class HotSearchAdmin(object):
@@ -65,7 +89,9 @@ class BannerAdmin(object):
 xadmin.site.register(GoodsCategory, GoodsCategoryAdmin)
 xadmin.site.register(GoodsCategoryBrand, GoodsCategoryBrandAdmin)
 xadmin.site.register(Goods, GoodsAdmin)
+xadmin.site.register(GoodsImage, GoodsImageAdmin)
 xadmin.site.register(Banner, BannerAdmin)
+
 
 # xadmin.site.register(HotSearchWords, HotSearchAdmin)
 # xadmin.site.register(IndexAd, IndexAdAdmin)
