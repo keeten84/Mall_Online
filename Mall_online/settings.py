@@ -16,7 +16,6 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 添加apps作为搜索目录
-sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
@@ -43,10 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
-    'goods',
-    'operations',
-    'transaction',
+    'users.apps.UsersConfig',
+    'goods.apps.GoodsConfig',
+    'operations.apps.OperationsConfig',
+    'transaction.apps.TransactionConfig',
+    # 注册xadmin
+    'xadmin',
+    'crispy_forms',
+    #富文本编辑器
     'DjangoUeditor',
 ]
 

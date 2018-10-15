@@ -33,14 +33,15 @@ class GoodsCategory(models.Model):
 
 
 class GoodsCategoryBrand(models.Model):
-    '''商家品牌'''
+    '''品牌名'''
+    category = models.ForeignKey(GoodsCategory, null=True, blank=True, verbose_name='商品类别', on_delete=models.CASCADE)
     name = models.CharField('商家品牌名', max_length=30, default='', help_text='商家品牌名')
     desc = models.TextField('品牌描述', max_length=300, default='', help_text='品牌描述')
     image = models.ImageField('品牌logo', max_length=200, upload_to='brand/images')
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:
-        verbose_name = '商家品牌'
+        verbose_name = '商家品牌名'
         verbose_name_plural = verbose_name
 
     def __str__(self):
@@ -76,7 +77,7 @@ class Goods(models.Model):
         return self.name
 
 
-class GoodImage(models.Model):
+class GoodsImage(models.Model):
     '''商品轮播图'''
     goods = models.ForeignKey(Goods, verbose_name='商品', related_name='images', on_delete=models.CASCADE)
     image = models.ImageField('商品图片', upload_to='', null=True, blank=True)
