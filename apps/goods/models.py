@@ -37,7 +37,7 @@ class GoodsCategoryBrand(models.Model):
     category = models.ForeignKey(GoodsCategory, null=True, blank=True, verbose_name='商品类别', on_delete=models.CASCADE)
     name = models.CharField('商家品牌名', max_length=30, default='', help_text='商家品牌名')
     desc = models.TextField('品牌描述', max_length=300, default='', help_text='品牌描述')
-    image = models.ImageField('品牌logo', max_length=200, upload_to='brand/images')
+    image = models.ImageField('品牌logo', max_length=200, upload_to='brands/')
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:
@@ -58,7 +58,7 @@ class Goods(models.Model):
     sold_nums = models.IntegerField('商品销售量', default=0)
     goods_nums = models.IntegerField('库存数', default=0)
     market_price = models.FloatField('市场价', default=0)
-    shop_price = models.IntegerField('零售价', default=0)
+    sale_price = models.IntegerField('零售价', default=0)
     goods_brief = models.TextField('商品简介', max_length=500)
     goods_desc = UEditorField('商品详细描述', width=900, height=500, toolbars='full',
                               imagePath='goods/images/', filePath='goods/files/', default='')

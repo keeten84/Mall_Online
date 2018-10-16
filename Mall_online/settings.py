@@ -137,3 +137,8 @@ STATIC_URL = '/static/'
 STATICFILES = (
     os.path.join(BASE_DIR, '/static/')
 )
+
+
+# 配置资源文件的配置方法
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

@@ -15,8 +15,16 @@ Including another URLconf
 """
 import xadmin
 from django.conf.urls import url
-
+from Mall_online.settings import MEDIA_ROOT
+from django.views.static import serve
+from goods.views_base import GoodsListViews
 
 urlpatterns = [
     url('^admin/', xadmin.site.urls),
+    # 配置上传资源文件的访问处理函数
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+
+    # 商品列表页面
+    url(r'^goods/$',GoodsListViews.as_view(),name='goods_list')
+
 ]
