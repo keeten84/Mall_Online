@@ -52,7 +52,7 @@ class Goods(models.Model):
     '''商品'''
     category = models.ForeignKey(GoodsCategory, verbose_name='商品类别', on_delete=models.CASCADE)
     goods_sn = models.CharField('商品唯一货号', max_length=50, default='')
-    name = models.CharField('商品名称', max_length=200)
+    name = models.CharField('商品名称', max_length=100)
     fav_nums = models.IntegerField('收藏数', default=0)
     click_nums = models.IntegerField('点击数', default=0)
     sold_nums = models.IntegerField('商品销售量', default=0)

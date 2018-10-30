@@ -51,9 +51,16 @@ INSTALLED_APPS = [
     'crispy_forms',
     #富文本编辑器
     'DjangoUeditor',
+    'rest_framework',
+    # 使用filter筛选库
+    'django_filters',
+    # 跨域的处理方法
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    # 跨域处理方法的middleware,必须放置于CommonMiddleware的前面
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,7 +68,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'Mall_online.urls'
 
@@ -142,3 +152,10 @@ STATICFILES = (
 # 配置资源文件的配置方法
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10,
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend'),
+}
