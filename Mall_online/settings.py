@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'django_filters',
     # 跨域的处理方法
     'corsheaders',
+    # 使用TokenAuthentication,添加之后进行数据迁移migrate
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -140,9 +142,13 @@ USE_L10N = True
 
 USE_TZ = False
 
+# 添加自己定义的用户登录验证方法
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES = (
     os.path.join(BASE_DIR, '/static/')
@@ -157,5 +163,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    # 'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend'),
+    # 添加JWT认证的配置
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+                                       'rest_framework.authentication.BasicAuthentication',
+                                       'rest_framework.authentication.SessionAuthentication',
+                                       'rest_framework.authentication.TokenAuthentication',
+                                       ),
 }
