@@ -16,8 +16,6 @@ router.register(r'goods', GoodsListViewSet, base_name='goods')
 # 配置category的Url
 router.register(r'categorys', CategoryViewSet, base_name="categorys")
 
-
-
 urlpatterns = [
     url('^admin/', xadmin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

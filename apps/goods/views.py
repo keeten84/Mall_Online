@@ -11,7 +11,7 @@ from .serializer import GoodsSerializer, CategorySerializer
 
 # 定制属于某个View的Pagination的方法
 class GoodsListViewPagination(PageNumberPagination):
-    page_size = 10  # 每页想取多少条数据
+    page_size = 12  # 每页想取多少条数据
     page_size_query_param = 'page_size'
     page_query_param = 'page'
     max_page_size = 100  # 最大页数
@@ -31,7 +31,7 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     # 添加search_filter
     search_fields = ('name', 'goods_brief', 'goods_desc')
     # 添加排序
-    ordering_fields = ('sold_nums','sale_price','add_time')
+    ordering_fields = ('sold_num','shop_price')
 
 
 class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):

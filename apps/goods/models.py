@@ -17,8 +17,8 @@ class GoodsCategory(models.Model):
 
     name = models.CharField('类别名', max_length=30, default='', help_text='类别名')
     code = models.CharField('类别代码', max_length=30, default='', help_text='类别代码')
-    desc = models.CharField('类别描述', max_length=300, default='', help_text='类别描述')
-    category_type = models.CharField('类别级别', max_length=10, choices=CATEGORY_TYPE, help_text='类别级别')
+    desc = models.TextField('类别描述', max_length=300, default='', help_text='类别描述')
+    category_type = models.IntegerField('类目级别', choices=CATEGORY_TYPE, help_text='类目级别')
     parent_category = models.ForeignKey('self', null=True, blank=True, verbose_name='父类别',
                                         related_name='sub_cat', on_delete=models.CASCADE)
     is_tab = models.BooleanField('是否放置于导航', default=False, help_text='是否放置于导航')
@@ -53,12 +53,12 @@ class Goods(models.Model):
     category = models.ForeignKey(GoodsCategory, verbose_name='商品类别', on_delete=models.CASCADE)
     goods_sn = models.CharField('商品唯一货号', max_length=50, default='')
     name = models.CharField('商品名称', max_length=100)
-    fav_nums = models.IntegerField('收藏数', default=0)
-    click_nums = models.IntegerField('点击数', default=0)
-    sold_nums = models.IntegerField('商品销售量', default=0)
-    goods_nums = models.IntegerField('库存数', default=0)
-    market_price = models.FloatField('市场价', default=0)
-    sale_price = models.IntegerField('零售价', default=0)
+    fav_num = models.IntegerField('收藏数', default=0)
+    click_num = models.IntegerField('点击数', default=0)
+    sold_num = models.IntegerField('商品销售量', default=0)
+    goods_num = models.IntegerField('库存数', default=0)
+    market_price = models.FloatField('市场价格', default=0)
+    shop_price = models.IntegerField('本店价格', default=0)
     goods_brief = models.TextField('商品简介', max_length=500)
     goods_desc = UEditorField('商品详细描述', width=900, height=500, toolbars='full',
                               imagePath='goods/images/', filePath='goods/files/', default='')
@@ -66,7 +66,6 @@ class Goods(models.Model):
     ship_free = models.BooleanField('是否免邮', default=True)
     is_new = models.BooleanField('是否新品', default=False)
     is_hot = models.BooleanField('是否热卖', default=False)
-
     add_time = models.DateTimeField('添加时间', default=datetime.now)
 
     class Meta:

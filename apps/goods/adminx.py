@@ -38,17 +38,17 @@ class GoodsCategoryBrandAdmin(object):
 
 
 class GoodsAdmin(object):
-    list_display = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
-                    'market_price', 'sale_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+    list_display = ['category', 'goods_sn', 'name', 'fav_num', 'click_num', 'sold_num', 'goods_num',
+                    'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
                     'ship_free', 'is_new', 'is_hot', 'add_time']
 
-    search_fields = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
-                     'market_price', 'sale_price', 'goods_brief', 'goods_desc', 'goods_front_image',
-                     'ship_free', 'is_new', 'is_hot']
+    search_fields = ['category', 'goods_sn', 'name', 'fav_num', 'click_num', 'sold_num', 'goods_num',
+                    'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+                    'ship_free', 'is_new', 'is_hot']
 
-    list_filter = ['category', 'goods_sn', 'name', 'fav_nums', 'click_nums', 'sold_nums', 'goods_nums',
-                   'market_price', 'sale_price', 'goods_brief', 'goods_desc', 'goods_front_image',
-                   'ship_free', 'is_new', 'is_hot', 'add_time']
+    list_filter = ['category', 'goods_sn', 'name', 'fav_num', 'click_num', 'sold_num', 'goods_num',
+                    'market_price', 'shop_price', 'goods_brief', 'goods_desc', 'goods_front_image',
+                    'ship_free', 'is_new', 'is_hot', 'add_time']
 
     list_editable = ["is_hot", ]
 
