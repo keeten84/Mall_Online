@@ -1,12 +1,14 @@
 import xadmin
 from django.views.static import serve
 from django.conf.urls import url, include
-from Mall_online.settings import MEDIA_ROOT
 from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls
 from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
+
+from Mall_online.settings import MEDIA_ROOT
 from goods.views import GoodsListViewSet, CategoryViewSet
+from users.views import SmsCodeViewSet, UserViewSet
 
 # 通过router去配置访问路径
 router = DefaultRouter()
@@ -16,6 +18,13 @@ router.register(r'goods', GoodsListViewSet, base_name='goods')
 
 # 配置category的Url
 router.register(r'categorys', CategoryViewSet, base_name="categorys")
+
+# 配置codes验证码的url
+router.register(r'codes', SmsCodeViewSet, base_name="codes")
+
+# 配置users验证码的url
+router.register(r'users', UserViewSet, base_name="users")
+
 
 urlpatterns = [
     url('^admin/', xadmin.site.urls),

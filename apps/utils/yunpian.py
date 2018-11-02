@@ -14,7 +14,7 @@ class YunPian(object):
         parmas = {
             'apikey' : self.api_key,
             'mobile' : mobile,
-            'text' : '您的验证码是{code}，如非本人操作，请忽略本短信'.format(code=code),
+            'text' : '【线上生鲜超市】您的验证码是{code}，如非本人操作，请忽略本短信'.format(code=code),
         }
 
         response = requests.post(self.single_send_url,data=parmas)
@@ -22,3 +22,6 @@ class YunPian(object):
         print(re_dict)
 
 
+if __name__ == "__main__":
+    yun_pian = YunPian("")
+    yun_pian.send_sms("2017", "")
