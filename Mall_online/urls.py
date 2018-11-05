@@ -8,6 +8,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 from Mall_online.settings import MEDIA_ROOT
 from goods.views import GoodsListViewSet, CategoryViewSet
+# from operations.views import UserFavViewSet
 from users.views import SmsCodeViewSet, UserViewSet
 
 # 通过router去配置访问路径
@@ -24,6 +25,9 @@ router.register(r'codes', SmsCodeViewSet, base_name="codes")
 
 # 配置users验证码的url
 router.register(r'users', UserViewSet, base_name="users")
+
+# 配置userfav收藏功能url
+# router.register(r'userfavs', UserFavViewSet, base_name="userfavs")
 
 
 urlpatterns = [

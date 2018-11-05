@@ -18,7 +18,7 @@ class GoodsListViewPagination(PageNumberPagination):
 
 
 # 方法三 使用最高届别的GenericVieSet来生成商品列表页的数据
-class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets.GenericViewSet):
     '''商品列表页, 分页, 过滤，搜索, 排序'''
     # 如果没有添加order_by('id')，列表页顺序将没有顺序，并服务器报错会生成一个没有排序的queryset
     queryset = Goods.objects.all().order_by('id')
@@ -43,3 +43,5 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     queryset = GoodsCategory.objects.filter(category_type=1)
     serializer_class = CategorySerializer
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
+
+

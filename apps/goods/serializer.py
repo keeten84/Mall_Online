@@ -2,7 +2,7 @@
 # __author__ = 'Keeten_Qiu'
 # __date__ = '2018/10/17 下午2:32'
 from rest_framework import serializers
-from .models import GoodsCategory, Goods
+from .models import GoodsCategory, Goods, GoodsImage
 
 
 class CategorySerializer3(serializers.ModelSerializer):
@@ -30,9 +30,16 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class GoodsImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsImage
+        fields = ('image',)
+
 class GoodsSerializer(serializers.ModelSerializer):
     # 将category字段用序列化之后的GoodsCategory代替，就可以实现序列化嵌套功能
     category = CategorySerializer()
+    # 将image数据序列化到goods的序列化中
+    images = GoodsImageSerializer(many=True)
 
     class Meta:
         model = Goods

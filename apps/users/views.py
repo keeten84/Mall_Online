@@ -6,6 +6,7 @@ from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.mixins import CreateModelMixin
+from rest_framework_jwt.serializers import jwt_payload_handler, jwt_encode_handler
 
 from utils.yunpian import YunPian
 from users.models import VerifyCode
@@ -75,3 +76,19 @@ class SmsCodeViewSet(CreateModelMixin, viewsets.GenericViewSet):
 class UserViewSet(CreateModelMixin,viewsets.GenericViewSet):
     '''用户'''
     serializer_class = UserRegSerializer
+    queryset = User.objects.all()
+
+    # 因为前端需要用户注册后返回登录页面，需要使用到token，所以重载create方法
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        # 获取user对象
+        user = self.perform_create(serializer)
+        # 生成JWT到token
+        re_dict = serializer.data
+        payload = jwt_payload_handler(user)
+        re_dict["token"] = jwt_encode_handler(payload)
+        re_dict["name"] = user.name if user.name else user.username
+
+        headers = self.get_success_headers(serializer.data)
+        return Response(re_dict, status=status.HTTP_201_CREATED, headers=headers)
