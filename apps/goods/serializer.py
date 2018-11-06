@@ -2,7 +2,7 @@
 # __author__ = 'Keeten_Qiu'
 # __date__ = '2018/10/17 下午2:32'
 from rest_framework import serializers
-from .models import GoodsCategory, Goods, GoodsImage
+from .models import GoodsCategory, Goods, GoodsImage, HotSearchWords
 
 
 class CategorySerializer3(serializers.ModelSerializer):
@@ -45,3 +45,9 @@ class GoodsSerializer(serializers.ModelSerializer):
         model = Goods
         # 序列化所有字段，也可以把需要序列化的字段fields = ('category'）写进入
         fields = '__all__'
+
+
+class HotWordsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HotSearchWords
+        fields = "__all__"

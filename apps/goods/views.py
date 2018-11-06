@@ -5,8 +5,8 @@ from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 
 from .filters import GoodsFilter
-from .models import Goods, GoodsCategory
-from .serializer import GoodsSerializer, CategorySerializer
+from .models import Goods, GoodsCategory, HotSearchWords
+from .serializer import GoodsSerializer, CategorySerializer, HotWordsSerializer
 
 
 # 定制属于某个View的Pagination的方法
@@ -45,3 +45,10 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
 
 
+class HotSearchsViewset(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    获取热搜词列表
+    """
+    queryset = HotSearchWords.objects.all().order_by("-index")
+    serializer_class = HotWordsSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
