@@ -162,6 +162,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': 'django_filters.rest_framework.DjangoFilterBackend',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     # 添加JWT认证的配置
     'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.BasicAuthentication',

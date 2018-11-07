@@ -12,7 +12,7 @@
 @time: 2017/7/4 17:04
 """
 import xadmin
-from .models import Goods, GoodsCategory, GoodsImage, GoodsCategoryBrand, Banner
+from .models import Goods, GoodsCategory, GoodsImage, GoodsCategoryBrand, Banner, HotSearchWords
 
 
 # from .models import IndexAd
@@ -78,6 +78,8 @@ class BannerAdmin(object):
     list_filter = ["goods", "image", "index", 'add_time']
     model_icon = 'fa fa-image'
 
+class HotSearchAdmin(object):
+    list_display = ["keywords", "index", "add_time"]
 
 # class HotSearchAdmin(object):
 #     list_display = ["keywords", "index", "add_time"]
@@ -91,6 +93,7 @@ xadmin.site.register(GoodsCategoryBrand, GoodsCategoryBrandAdmin)
 xadmin.site.register(Goods, GoodsAdmin)
 xadmin.site.register(GoodsImage, GoodsImageAdmin)
 xadmin.site.register(Banner, BannerAdmin)
+xadmin.site.register(HotSearchWords, HotSearchAdmin)
 
 
 # xadmin.site.register(HotSearchWords, HotSearchAdmin)

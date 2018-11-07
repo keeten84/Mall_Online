@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4edab564-bc29-4c2e-aa02-7823e554584e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/operations/migrations/0002_auto_20181106_0053.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/utils/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/operations/migrations/0003_auto_20181107_1505.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/operations/migrations/0004_auto_20181107_1517.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mall_online/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mall_online/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mall_online/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mall_online/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,30 +48,30 @@
     <session id="116721309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="15070" />
-          <entry key="py@Mall_online" value="332" />
-          <entry key="txt" value="516" />
+          <entry key="py" value="16693" />
+          <entry key="py@Mall_online" value="348" />
+          <entry key="txt" value="539" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CommandLine" value="243" />
-          <entry key="PLAIN_TEXT" value="605" />
-          <entry key="Python" value="15070" />
+          <entry key="CommandLine" value="259" />
+          <entry key="PLAIN_TEXT" value="628" />
+          <entry key="Python" value="16693" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,7 +79,7 @@
           <entry key="config" value="8" />
           <entry key="css" value="4" />
           <entry key="json" value="2" />
-          <entry key="py" value="352" />
+          <entry key="py" value="402" />
           <entry key="sql" value="2" />
           <entry key="txt" value="1" />
         </counts>
@@ -87,7 +89,7 @@
           <entry key="CSS" value="4" />
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="352" />
+          <entry key="Python" value="402" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -98,11 +100,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/users/serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+              <folding>
+                <element signature="n#!!doc" />
+                <element signature="e#453#1148#0" />
+                <element signature="e#565#1148#0" />
+                <element signature="e#565#635#1" />
+                <element signature="e#2095#2750#0" />
+                <element signature="e#2791#2873#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mall_online/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="-46">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -111,56 +130,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/goods/serializer.py">
+        <entry file="file://$PROJECT_DIR$/apps/operations/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="154">
+              <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="17" />
               <folding>
-                <element signature="e#85#123#0" expanded="true" />
-                <marker date="1541479026488" expanded="true" signature="795:868" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-                <marker date="1541479112645" expanded="false" signature="1406:1411" ph="..." />
+                <element signature="e#197#657#0" />
+                <element signature="e#491#599#0" />
+                <element signature="e#632#657#0" />
+                <element signature="e#747#833#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/goods/models.py">
+        <entry file="file://$PROJECT_DIR$/apps/operations/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="108" column="20" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="20" />
+            <state relative-caret-position="418">
+              <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding>
-                <element signature="e#176#1075#0" />
-                <element signature="e#217#271#0" />
-                <element signature="e#962#1026#0" />
-                <element signature="e#1059#1075#0" />
-                <element signature="e#1122#1697#0" />
-                <element signature="e#1583#1648#0" />
-                <element signature="e#1681#1697#0" />
-                <element signature="e#1731#2974#0" />
-                <element signature="e#2863#2925#0" />
-                <element signature="e#2958#2974#0" />
-                <element signature="e#3013#3497#0" />
-                <element signature="e#3377#3442#0" />
-                <element signature="e#3475#3497#0" />
-                <element signature="e#3532#3948#0" />
-                <element signature="e#3830#3893#0" />
-                <element signature="e#3926#3948#0" />
-                <element signature="e#3991#4010#1" />
-                <element signature="e#4256#4319#0" />
-                <element signature="e#4352#4372#0" />
+                <element signature="n#!!doc" />
+                <element signature="e#345#438#0" />
+                <element signature="e#396#438#0" />
+                <element signature="e#500#908#0" />
+                <element signature="e#639#908#0" />
+                <element signature="e#677#867#0" />
+                <element signature="e#977#1204#0" />
+                <element signature="e#1088#1204#0" />
+                <marker date="1541575138909" expanded="false" signature="1075:1162" ph="..." />
+                <marker date="1541575138909" expanded="true" signature="1355:1356" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#734#1572#0" />
+                <element signature="e#734#832#1" />
+                <element signature="e#1270#1324#0" />
+                <element signature="e#1393#1572#0" />
+                <element signature="e#1733#1829#1" />
+                <marker date="1541575329658" expanded="false" signature="1765:1770" ph="..." />
+                <marker date="1541575329658" expanded="true" signature="2276:2656" ph="..." />
               </folding>
             </state>
           </provider>
@@ -209,7 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/extra_apps/xadmin/plugins/bookmark.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/plugins/details.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/plugins/relate.py" />
         <option value="$PROJECT_DIR$/extra_apps/xadmin/plugins/sortablelist.py" />
@@ -241,25 +258,26 @@
         <option value="$PROJECT_DIR$/db_tools/data/category_data.py" />
         <option value="$PROJECT_DIR$/db_tools/import_goods_data.py" />
         <option value="$PROJECT_DIR$/apps/goods/views_base.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/settings.py" />
-        <option value="$PROJECT_DIR$/apps/goods/adminx.py" />
         <option value="$PROJECT_DIR$/apps/utils/yunpian.py" />
         <option value="$PROJECT_DIR$/apps/users/models.py" />
-        <option value="$PROJECT_DIR$/apps/users/serializer.py" />
         <option value="$PROJECT_DIR$/apps/users/signals.py" />
         <option value="$PROJECT_DIR$/apps/users/apps.py" />
-        <option value="$PROJECT_DIR$/apps/users/views.py" />
-        <option value="$PROJECT_DIR$/apps/goods/filters.py" />
-        <option value="$PROJECT_DIR$/apps/operations/serializer.py" />
-        <option value="$PROJECT_DIR$/apps/operations/models.py" />
         <option value="$PROJECT_DIR$/apps/utils/permissions.py" />
-        <option value="$PROJECT_DIR$/Mall_online/settings.py" />
-        <option value="$PROJECT_DIR$/apps/operations/views.py" />
         <option value="$PROJECT_DIR$/apps/goods/models.py" />
         <option value="$PROJECT_DIR$/apps/goods/serializer.py" />
-        <option value="$PROJECT_DIR$/Mall_online/urls.py" />
+        <option value="$PROJECT_DIR$/apps/goods/adminx.py" />
         <option value="$PROJECT_DIR$/apps/goods/views.py" />
+        <option value="$PROJECT_DIR$/apps/goods/filters.py" />
+        <option value="$PROJECT_DIR$/Mall_online/settings.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/renderers.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py" />
+        <option value="$PROJECT_DIR$/apps/users/serializer.py" />
+        <option value="$PROJECT_DIR$/apps/users/views.py" />
+        <option value="$PROJECT_DIR$/apps/operations/models.py" />
+        <option value="$PROJECT_DIR$/apps/operations/serializer.py" />
+        <option value="$PROJECT_DIR$/Mall_online/urls.py" />
+        <option value="$PROJECT_DIR$/apps/operations/views.py" />
       </list>
     </option>
   </component>
@@ -270,7 +288,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-392" />
+    <option name="x" value="14" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
@@ -309,7 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,18 +343,7 @@
               <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
-              <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
@@ -348,12 +354,20 @@
               <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
               <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mall_online" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mall_online" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,18 +378,18 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db_tools/data" />
+      <recent name="$PROJECT_DIR$/db_tools" />
+      <recent name="$PROJECT_DIR$/apps" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/operations" />
       <recent name="$PROJECT_DIR$/apps/users" />
       <recent name="$PROJECT_DIR$/db_tools/data" />
       <recent name="$PROJECT_DIR$/db_tools" />
       <recent name="$PROJECT_DIR$/media" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/db_tools/data" />
-      <recent name="$PROJECT_DIR$/db_tools" />
-      <recent name="$PROJECT_DIR$/apps" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -632,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541422205072</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update user add favourite Features">
+      <created>1541479242669</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1541479242669</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -645,16 +666,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="23" width="1440" height="813" extended-state="6" />
-    <editor active="true" />
+    <frame x="36" y="23" width="1440" height="813" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4965326" visible="true" weight="0.14949928" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4965326" visible="true" weight="0.15164521" />
       <window_info id="Structure" order="1" sideWeight="0.5006935" side_tool="true" weight="0.28437048" />
       <window_info id="Favorites" order="2" sideWeight="0.5034674" side_tool="true" weight="0.19319826" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32871014" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.26768377" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.739251" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
@@ -694,7 +714,8 @@
     <MESSAGE value="add yunpian utils" />
     <MESSAGE value="UserRegSerializer" />
     <MESSAGE value="完成用户注册功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成用户注册功能" />
+    <MESSAGE value="update user add favourite Features" />
+    <option name="LAST_COMMIT_MESSAGE" value="update user add favourite Features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -724,30 +745,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/css/xadmin.widget.editable.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/transaction/xadmin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/xadmin/static/xadmin/vendor/font-awesome/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -842,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -863,20 +853,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/goods/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/transaction/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,20 +878,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="453" column="13" lean-forward="true" selection-start-line="453" selection-start-column="13" selection-end-line="453" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#86#97#0" expanded="true" />
+            <marker date="1541140065966" expanded="true" signature="137:142" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -939,29 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/users/signals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-723">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1541400853610" expanded="false" signature="1357:1364" ph="..." />
-            <marker date="1541400853610" expanded="true" signature="2320:2325" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,40 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/goods/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/users/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <element signature="e#178#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="e#85#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/utils/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1034,31 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/models.py">
+    <entry file="file://$PROJECT_DIR$/apps/goods/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mall_online/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="169" column="1" lean-forward="true" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#310#1" />
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="13" column="93" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="117">
+          <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1066,44 +963,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="108" column="20" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/goods/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="17" column="101" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mall_online/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="164" column="31" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
           <folding>
-            <element signature="e#176#1075#0" />
-            <element signature="e#217#271#0" />
-            <element signature="e#962#1026#0" />
-            <element signature="e#1059#1075#0" />
-            <element signature="e#1122#1697#0" />
-            <element signature="e#1583#1648#0" />
-            <element signature="e#1681#1697#0" />
-            <element signature="e#1731#2974#0" />
-            <element signature="e#2863#2925#0" />
-            <element signature="e#2958#2974#0" />
-            <element signature="e#3013#3497#0" />
-            <element signature="e#3377#3442#0" />
-            <element signature="e#3475#3497#0" />
-            <element signature="e#3532#3948#0" />
-            <element signature="e#3830#3893#0" />
-            <element signature="e#3926#3948#0" />
-            <element signature="e#3991#4010#1" />
-            <element signature="e#4256#4319#0" />
-            <element signature="e#4352#4372#0" />
+            <element signature="e#0#310#1" />
+            <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mall_online/urls.py">
+    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="44">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="34" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1541491493843" expanded="true" signature="1406:1411" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/views/decorators/csrf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="475" selection-start-line="475" selection-end-line="475" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/renderers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="562" selection-start-line="562" selection-end-line="562" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/goods/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="476">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="14" />
           <folding>
             <element signature="e#85#123#0" expanded="true" />
             <marker date="1541479026488" expanded="true" signature="795:868" ph="..." />
@@ -1111,13 +1047,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/mixins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="53" column="66" lean-forward="true" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="66" />
+        <state relative-caret-position="426">
+          <caret line="39" column="51" lean-forward="true" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="e#178#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="77" column="34" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+          <folding>
+            <element signature="e#797#1112#0" />
+            <element signature="e#900#1112#0" />
+            <element signature="e#917#1057#0" />
+            <element signature="e#1184#2409#0" />
+            <element signature="e#1273#1510#0" />
+            <element signature="e#1273#1324#1" />
+            <element signature="e#1568#2409#0" />
+            <element signature="e#2079#2191#0" />
+            <element signature="e#2095#2154#0" />
+            <element signature="e#2218#2409#0" />
+            <element signature="e#2328#2376#0" />
+            <element signature="e#2452#2456#0" />
+            <element signature="e#2577#2640#1" />
+            <element signature="e#2554#4364#0" />
+            <element signature="e#2986#3477#0" />
+            <element signature="e#3483#3495#0" />
+            <element signature="e#3588#3747#0" />
+            <element signature="e#3753#3771#0" />
+            <element signature="e#3981#4162#0" />
+            <element signature="e#4168#4221#0" />
+            <element signature="e#4287#4311#0" />
+            <element signature="e#4363#4387#0" />
+            <marker date="1541571506881" expanded="false" signature="1510:1516" ph="..." />
+            <marker date="1541571506881" expanded="false" signature="2547:2552" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/viewsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="177" column="19" lean-forward="true" selection-start-line="177" selection-start-column="19" selection-end-line="182" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#175#725#0" />
+            <element signature="e#608#672#0" />
+            <element signature="e#705#725#0" />
+            <element signature="e#764#1094#0" />
+            <element signature="e#982#1045#0" />
+            <element signature="e#1078#1094#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#345#438#0" />
+            <element signature="e#396#438#0" />
+            <element signature="e#500#908#0" />
+            <element signature="e#639#908#0" />
+            <element signature="e#677#867#0" />
+            <element signature="e#977#1204#0" />
+            <element signature="e#1088#1204#0" />
+            <marker date="1541575138909" expanded="false" signature="1075:1162" ph="..." />
+            <marker date="1541575138909" expanded="true" signature="1355:1356" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="e#197#657#0" />
+            <element signature="e#491#599#0" />
+            <element signature="e#632#657#0" />
+            <element signature="e#747#833#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mall_online/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operations/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <marker date="1541479112645" expanded="false" signature="1406:1411" ph="..." />
+            <element signature="e#734#1572#0" />
+            <element signature="e#734#832#1" />
+            <element signature="e#1270#1324#0" />
+            <element signature="e#1393#1572#0" />
+            <element signature="e#1733#1829#1" />
+            <marker date="1541575329658" expanded="false" signature="1765:1770" ph="..." />
+            <marker date="1541575329658" expanded="true" signature="2276:2656" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#453#1148#0" />
+            <element signature="e#565#1148#0" />
+            <element signature="e#565#635#1" />
+            <element signature="e#2095#2750#0" />
+            <element signature="e#2791#2873#0" />
           </folding>
         </state>
       </provider>

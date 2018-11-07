@@ -14,8 +14,8 @@ class GoodsFilter(django_filters.rest_framework.FilterSet):
     商品的过滤类
     '''
     # 设置最大价格和最小价格的区间范围,注意变量名称应该与前端保持一样
-    pricemin = django_filters.NumberFilter(field_name="sale_price", lookup_expr='gte')
-    pricemax = django_filters.NumberFilter(field_name="sale_price", lookup_expr='lte')
+    pricemin = django_filters.NumberFilter(field_name="sale_price", lookup_expr='gte',help_text='最低价格')
+    pricemax = django_filters.NumberFilter(field_name="sale_price", lookup_expr='lte',help_text='最高价格')
     # 通过下面自定义方法进行筛选
     top_category = django_filters.NumberFilter(method='top_category_filter')
     # 模糊查询lookup_expr='icontains

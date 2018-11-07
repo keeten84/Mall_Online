@@ -38,6 +38,8 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     '''
     list:
         商品分类列表数据
+    retrieve:
+        获取商品分类详情
     '''
     # 首先返回商品分类的所有数据
     queryset = GoodsCategory.objects.filter(category_type=1)

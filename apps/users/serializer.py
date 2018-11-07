@@ -38,7 +38,7 @@ class SmsSerializer(serializers.Serializer):
 
 class UserRegSerializer(serializers.ModelSerializer):
     '''用户注册的序列化'''
-    code = serializers.CharField(max_length=4, min_length=4,write_only=True, help_text='验证码',
+    code = serializers.CharField(max_length=4, min_length=4, write_only=True, help_text='验证码',
                                  error_messages={
                                      'blank': '请输入验证码',
                                      'required':'请输入验证码',
@@ -46,7 +46,7 @@ class UserRegSerializer(serializers.ModelSerializer):
                                      'min_length':'验证码格式错误',
                                  })
 
-    username = serializers.CharField(label='用户名',required=True, allow_blank=False,
+    username = serializers.CharField(label='用户名',help_text='用户名',required=True, allow_blank=False,
                                      validators=[UniqueValidator(queryset=User.objects.all(), message="用户已经存在")])
 
     password = serializers.CharField( style={'input_type': 'password'},
@@ -76,4 +76,14 @@ class UserRegSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'code', 'mobile','password')
+        fields = ("username", "code", "mobile", "password")
+
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    """
+    用户详情序列化
+    """
+    class Meta:
+        model = User
+        fields = ("username", "gender", "birthday", "email", "mobile")
+
