@@ -61,7 +61,7 @@ class LeavingMessageViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
 
     # 获取当前用户的queryset数据
     def get_queryset(self):
-        return UserLeavingMessage.objects.filter(user=self.request.user)
+        return UserLeavingMessage.objects.filter(user=self.request.user).order_by('id')
 
 
 class AddressViewSet(viewsets.ModelViewSet):
@@ -81,4 +81,4 @@ class AddressViewSet(viewsets.ModelViewSet):
     authentication_classes = (JSONWebTokenAuthentication, SessionAuthentication)
     filter_backends = (DjangoFilterBackend,)
     def get_queryset(self):
-        return UserAddress.objects.filter(user=self.request.user)
+        return UserAddress.objects.filter(user=self.request.user).order_by('id')

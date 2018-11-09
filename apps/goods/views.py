@@ -8,6 +8,9 @@ from .filters import GoodsFilter
 from .models import Goods, GoodsCategory, HotSearchWords
 from .serializer import GoodsSerializer, CategorySerializer, HotWordsSerializer
 
+from rest_framework.authentication import SessionAuthentication
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+
 
 # 定制属于某个View的Pagination的方法
 class GoodsListViewPagination(PageNumberPagination):
@@ -42,7 +45,7 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
         获取商品分类详情
     '''
     # 首先返回商品分类的所有数据
-    queryset = GoodsCategory.objects.filter(category_type=1)
+    queryset = GoodsCategory.objects.filter(category_type=1).order_by('id')
     serializer_class = CategorySerializer
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
 

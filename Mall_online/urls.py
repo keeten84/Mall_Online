@@ -7,6 +7,7 @@ from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
 
 from Mall_online.settings import MEDIA_ROOT
+from transaction.views import ShoppingCartViewSet
 from users.views import SmsCodeViewSet, UserViewSet
 from goods.views import GoodsListViewSet, CategoryViewSet, HotSearchsViewset
 from operations.views import UserFavViewSet, LeavingMessageViewSet, AddressViewSet
@@ -37,6 +38,9 @@ router.register(r'messages', LeavingMessageViewSet, base_name="messages")
 
 # 配置收货地址收藏功能url
 router.register(r'address', AddressViewSet, base_name="address")
+
+# 配置购物车功能url
+router.register(r'shopcarts', ShoppingCartViewSet, base_name="shopcarts")
 
 
 urlpatterns = [
