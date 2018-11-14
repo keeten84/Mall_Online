@@ -183,3 +183,7 @@ REGEX_MOBILE = '^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\
 
 #云片网短信服务器设置
 API_KEY = '你申请时候的apikey'
+
+# 支付宝相关配置
+private_key_path = os.path.join(BASE_DIR,'apps/transaction/keys/private_2048.txt')
+ali_pub_key_path = os.path.join(BASE_DIR,'apps/transaction/keys/alipay_key_2048.txt')

@@ -7,7 +7,7 @@ from rest_framework.authtoken import views
 from rest_framework_jwt.views import obtain_jwt_token
 
 from Mall_online.settings import MEDIA_ROOT
-from transaction.views import ShoppingCartViewSet
+from transaction.views import ShoppingCartViewSet, OrderViewSet, AlipayView
 from users.views import SmsCodeViewSet, UserViewSet
 from goods.views import GoodsListViewSet, CategoryViewSet, HotSearchsViewset
 from operations.views import UserFavViewSet, LeavingMessageViewSet, AddressViewSet
@@ -42,6 +42,9 @@ router.register(r'address', AddressViewSet, base_name="address")
 # 配置购物车功能url
 router.register(r'shopcarts', ShoppingCartViewSet, base_name="shopcarts")
 
+# 配置订单url
+router.register(r'orders', OrderViewSet, base_name="orders")
+
 
 urlpatterns = [
     url('^admin/', xadmin.site.urls),
@@ -61,5 +64,8 @@ urlpatterns = [
 
     # 生成系统文档的配置方法
     url(r'^docs/', include_docs_urls(title='线上生鲜超市')),
+
+    # 支付宝return_url
+    url(r'^alipay/return/', AlipayView.as_view(), name="alipay")
 
 ]

@@ -22,16 +22,19 @@ class AliPay(object):
     """
     def __init__(self, appid, app_notify_url, app_private_key_path,
                  alipay_public_key_path, return_url, debug=False):
-        self.appid = appid
+        self.appid = appid  #传入appid
         self.app_notify_url = app_notify_url
-        self.app_private_key_path = app_private_key_path
+        self.app_private_key_path = app_private_key_path #传入private_key文件的路径
         self.app_private_key = None
         self.return_url = return_url
+        # 打开私钥文件
         with open(self.app_private_key_path) as fp:
+            # 读取之后保存为app_private_key
             self.app_private_key = RSA.importKey(fp.read())
-
+        # 打开支付宝公钥文件
         self.alipay_public_key_path = alipay_public_key_path
         with open(self.alipay_public_key_path) as fp:
+            # 读取之后保存为alipay_public_key
             self.alipay_public_key = RSA.import_key(fp.read())
 
 
@@ -41,6 +44,7 @@ class AliPay(object):
             self.__gateway = "https://openapi.alipay.com/gateway.do"
 
     def direct_pay(self, subject, out_trade_no, total_amount, return_url=None, **kwargs):
+        # 用于生成支付宝支付的请求参数
         biz_content = {
             "subject": subject,
             "out_trade_no": out_trade_no,
@@ -54,6 +58,7 @@ class AliPay(object):
         return self.sign_data(data)
 
     def build_body(self, method, biz_content, return_url=None):
+        # 用于生成支付宝支付时候的公共请求参数
         data = {
             "app_id": self.appid,
             "method": method,
@@ -71,8 +76,10 @@ class AliPay(object):
         return data
 
     def sign_data(self, data):
+        '''用于支付宝接口的签名'''
+        # 支付宝签名的规则不能有sign这个字段，所以使用pop方法去除再进行签名
         data.pop("sign", None)
-        # 排序后的字符串
+        # 去除sign字段后就可以得到一个完整的请求参数并且根据支付宝签名规则中，需要对参数进行排序，这里调用自定义排序方法ordered_data
         unsigned_items = self.ordered_data(data)
         unsigned_string = "&".join("{0}={1}".format(k, v) for k, v in unsigned_items)
         sign = self.sign(unsigned_string.encode("utf-8"))
@@ -84,6 +91,7 @@ class AliPay(object):
         return signed_string
 
     def ordered_data(self, data):
+        '''自定义排序方法'''
         complex_keys = []
         for key, value in data.items():
             if isinstance(value, dict):
@@ -96,13 +104,17 @@ class AliPay(object):
         return sorted([(k, v) for k, v in data.items()])
 
     def sign(self, unsigned_string):
+        '''进行签名的方法'''
         # 开始计算签名
         key = self.app_private_key
+        # 创建一个签名对象
         signer = PKCS1_v1_5.new(key)
+        # 生成签名
         signature = signer.sign(SHA256.new(unsigned_string))
         # base64 编码，转换为unicode表示并移除回车
         sign = encodebytes(signature).decode("utf8").replace("\n", "")
         return sign
+
 
     def _verify(self, raw_content, signature):
         # 开始计算签名
@@ -125,28 +137,32 @@ class AliPay(object):
 
 if __name__ == "__main__":
     return_url = 'http://47.92.87.172:8000/?total_amount=0.01&timestamp=2017-08-15+17%3A15%3A13&sign=jnnA1dGO2iu2ltMpxrF4MBKE20Akyn%2FLdYrFDkQ6ckY3Qz24P3DTxIvt%2BBTnR6nRk%2BPAiLjdS4sa%2BC9JomsdNGlrc2Flg6v6qtNzTWI%2FEM5WL0Ver9OqIJSTwamxT6dW9uYF5sc2Ivk1fHYvPuMfysd90lOAP%2FdwnCA12VoiHnflsLBAsdhJazbvquFP%2Bs1QWts29C2%2BXEtIlHxNgIgt3gHXpnYgsidHqfUYwZkasiDGAJt0EgkJ17Dzcljhzccb1oYPSbt%2FS5lnf9IMi%2BN0ZYo9%2FDa2HfvR6HG3WW1K%2FlJfdbLMBk4owomyu0sMY1l%2Fj0iTJniW%2BH4ftIfMOtADHA%3D%3D&trade_no=2017081521001004340200204114&sign_type=RSA2&auth_app_id=2016080600180695&charset=utf-8&seller_id=2088102170208070&method=alipay.trade.page.pay.return&app_id=2016080600180695&out_trade_no=201702021222&version=1.0'
-
-    alipay = AliPay(
-        appid="2016080600180695",
-        app_notify_url="http://projectsedus.com/",
-        app_private_key_path=u"H:/VueShop/RSA/private_2048.txt",
-        alipay_public_key_path="H:/VueShop/RSA/ali_pub.txt",  # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
-        debug=True,  # 默认False,
-        return_url="http://47.92.87.172:8000/"
-    )
-
     o = urlparse(return_url)
     query = parse_qs(o.query)
     processed_query = {}
     ali_sign = query.pop("sign")[0]
+
+
+    alipay = AliPay(
+        appid="2016091900548120",
+        app_notify_url="http://projectsedus.com/",
+        app_private_key_path=u"/Users/keeten/Desktop/project/Django/Mall_online/apps/transaction/keys/private_2048.txt",
+        alipay_public_key_path="/Users/keeten/Desktop/project/Django/Mall_online/apps/transaction/keys/alipay_key_2048.txt",  # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
+        debug=True,  # 默认False,
+        return_url="http://127.0.0.1:8000/alipay/return"
+    )
+
+
     for key, value in query.items():
         processed_query[key] = value[0]
-    print (alipay.verify(processed_query, ali_sign))
+    print(alipay.verify(processed_query, ali_sign))
 
     url = alipay.direct_pay(
         subject="测试订单",
-        out_trade_no="201702021222",
-        total_amount=0.01
+        out_trade_no="201811132012",
+        total_amount=14.96,
+        return_url = "http://127.0.0.1:8000/alipay/return"
     )
+
     re_url = "https://openapi.alipaydev.com/gateway.do?{data}".format(data=url)
     print(re_url)
