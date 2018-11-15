@@ -5,8 +5,9 @@ from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 
 from .filters import GoodsFilter
-from .models import Goods, GoodsCategory, HotSearchWords
-from .serializer import GoodsSerializer, CategorySerializer, HotWordsSerializer
+from .models import Goods, GoodsCategory, HotSearchWords, Banner
+from .serializer import GoodsSerializer, CategorySerializer, HotWordsSerializer, BannerSerializer, \
+    IndexCategorySerializer
 
 from rest_framework.authentication import SessionAuthentication
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
@@ -18,7 +19,6 @@ class GoodsListViewPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     page_query_param = 'page'
     max_page_size = 100  # 最大页数
-
 
 # 方法三 使用最高届别的GenericVieSet来生成商品列表页的数据
 class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets.GenericViewSet):
@@ -36,7 +36,6 @@ class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets
     # 添加排序
     ordering_fields = ('sold_num','shop_price')
 
-
 class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     '''
     list:
@@ -49,11 +48,26 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     serializer_class = CategorySerializer
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
 
-
 class HotSearchsViewset(mixins.ListModelMixin, viewsets.GenericViewSet):
     """
     获取热搜词列表
     """
     queryset = HotSearchWords.objects.all().order_by("-index")
     serializer_class = HotWordsSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
+
+class BannerViewSet(mixins.ListModelMixin,viewsets.GenericViewSet):
+    '''
+    获取轮播图列表
+    '''
+    queryset = Banner.objects.all().order_by('index')
+    serializer_class = BannerSerializer
+    filter_backends = (DjangoFilterBackend, filters.OrderingFilter)
+
+class IndexCategoryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    首页商品分类数据
+    """
+    queryset = GoodsCategory.objects.filter(is_tab=True, name__in=["生鲜食品", "酒水饮料"])
+    serializer_class = IndexCategorySerializer
     filter_backends = (DjangoFilterBackend, filters.OrderingFilter)

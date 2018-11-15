@@ -9,7 +9,7 @@ from rest_framework_jwt.views import obtain_jwt_token
 from Mall_online.settings import MEDIA_ROOT
 from transaction.views import ShoppingCartViewSet, OrderViewSet, AlipayView
 from users.views import SmsCodeViewSet, UserViewSet
-from goods.views import GoodsListViewSet, CategoryViewSet, HotSearchsViewset
+from goods.views import GoodsListViewSet, CategoryViewSet, HotSearchsViewset, BannerViewSet, IndexCategoryViewSet
 from operations.views import UserFavViewSet, LeavingMessageViewSet, AddressViewSet
 
 # 通过router去配置访问路径
@@ -44,6 +44,14 @@ router.register(r'shopcarts', ShoppingCartViewSet, base_name="shopcarts")
 
 # 配置订单url
 router.register(r'orders', OrderViewSet, base_name="orders")
+
+# 轮播图
+router.register(r'banners', BannerViewSet, base_name="banners")
+
+# 首页商品系列数据
+router.register(r'indexgoods', IndexCategoryViewSet, base_name="indexgoods")
+
+
 
 
 urlpatterns = [

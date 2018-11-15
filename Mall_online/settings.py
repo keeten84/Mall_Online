@@ -28,7 +28,7 @@ SECRET_KEY = 'stgu!wsr5h3916l8+^%(qws9g&$%0*p447eybq)#thq2ugbm$u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # 用自定义的userprofile表代替系统的user表
 AUTH_USER_MODEL = 'users.UserProfile'
@@ -103,7 +103,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Mall',
-        'HOST': '127.0.0.1',
+        'HOST': '127.0.0.1', #118.24.144.159
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': 'andy1984',
