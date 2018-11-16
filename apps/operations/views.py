@@ -35,6 +35,18 @@ class UserFavViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
     def get_queryset(self):
         return UserFav.objects.filter(user=self.request.user)
 
+    # 方法一，方法二通过signals.py去实现
+    #  通过重写perform_create()这个方法去实现增加收藏数的逻辑
+    # def perform_create(self, serializer):
+    #     # 获取到该商品数据
+    #     instance = serializer.save()
+    #     goods = instance.goods
+    #     # 收藏数加一
+    #     goods.fav_num += 1
+    #     # 保存
+    #     goods.save()
+
+
     # 根据使用的方法去动态选择序列化类
     def get_serializer_class(self):
         if self.action == "list":
@@ -42,6 +54,8 @@ class UserFavViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,
         elif self.action == "create":
             return UserFavSerizalizer
         return UserFavSerizalizer
+
+
 
 
 class LeavingMessageViewSet(mixins.CreateModelMixin, mixins.ListModelMixin,

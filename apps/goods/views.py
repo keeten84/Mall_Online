@@ -1,8 +1,10 @@
 from rest_framework import mixins
 from rest_framework import generics, viewsets
+from rest_framework.response import Response
 from rest_framework import filters, status
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework_extensions.cache.mixins import CacheResponseMixin
 
 from .filters import GoodsFilter
 from .models import Goods, GoodsCategory, HotSearchWords, Banner
@@ -21,7 +23,7 @@ class GoodsListViewPagination(PageNumberPagination):
     max_page_size = 100  # 最大页数
 
 # 方法三 使用最高届别的GenericVieSet来生成商品列表页的数据
-class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets.GenericViewSet):
+class GoodsListViewSet(CacheResponseMixin,mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets.GenericViewSet):
     '''商品列表页, 分页, 过滤，搜索, 排序'''
     # 如果没有添加order_by('id')，列表页顺序将没有顺序，并服务器报错会生成一个没有排序的queryset
     queryset = Goods.objects.all().order_by('id')
@@ -36,7 +38,18 @@ class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,viewsets
     # 添加排序
     ordering_fields = ('sold_num','shop_price')
 
-class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    # 实现商品点击数的自动修改，通过重写retrieve方法去实现
+    def retrieve(self, request, *args, **kwargs):
+        # 获取商品
+        instance = self.get_object()
+        # 当获取到当前的商品之后，商品的点击数自动加1
+        instance.click_num += 1
+        # 保存
+        instance.save()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
+
+class CategoryViewSet(CacheResponseMixin,mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     '''
     list:
         商品分类列表数据
