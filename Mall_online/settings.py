@@ -58,6 +58,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # 使用TokenAuthentication,添加之后进行数据迁移migrate
     'rest_framework.authtoken',
+    # 第三方登录
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +91,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 第三方登录
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -145,6 +150,12 @@ USE_TZ = False
 # 添加自己定义的用户登录验证方法
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
+    # 第三方登录
+    'social_core.backends.weibo.WeiboOAuth2',
+    'social_core.backends.weixin.WeixinOAuth2',
+    'social_core.backends.qq.QQOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+
 )
 
 # Static files (CSS, JavaScript, Images)
@@ -216,3 +227,7 @@ REST_FRAMEWORK_EXTENSIONS = {
 # }
 
 
+# 第三方登录相关参数
+SOCIAL_AUTH_WEIBO_KEY = '3200328026'
+SOCIAL_AUTH_WEIBO_SECRET = '6c4b438078e40d3cc8a0e581f594beb0'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/index/'

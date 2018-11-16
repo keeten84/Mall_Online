@@ -62,7 +62,7 @@ urlpatterns = [
 
     # JWT的认证接口
     # url(r'^jwt-auth/', obtain_jwt_token),
-    url(r'^login/', obtain_jwt_token),
+    url(r'^login/$', obtain_jwt_token),
 
     # 通过router去配置访问路径
     url(r'^', include(router.urls)),
@@ -74,6 +74,8 @@ urlpatterns = [
     url(r'^docs/', include_docs_urls(title='线上生鲜超市')),
 
     # 支付宝return_url
-    url(r'^alipay/return/', AlipayView.as_view(), name="alipay")
+    url(r'^alipay/return/', AlipayView.as_view(), name="alipay"),
 
+    # 第三方登录
+    url('', include('social_django.urls', namespace='social')),
 ]
