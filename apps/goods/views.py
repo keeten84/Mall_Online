@@ -3,8 +3,10 @@ from rest_framework import generics, viewsets
 from rest_framework.response import Response
 from rest_framework import filters, status
 from rest_framework.pagination import PageNumberPagination
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework_extensions.cache.mixins import CacheResponseMixin
+from rest_framework.throttling import UserRateThrottle,AnonRateThrottle
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 from .filters import GoodsFilter
 from .models import Goods, GoodsCategory, HotSearchWords, Banner
@@ -27,6 +29,8 @@ class GoodsListViewSet(CacheResponseMixin,mixins.ListModelMixin, mixins.Retrieve
     '''商品列表页, 分页, 过滤，搜索, 排序'''
     # 如果没有添加order_by('id')，列表页顺序将没有顺序，并服务器报错会生成一个没有排序的queryset
     queryset = Goods.objects.all().order_by('id')
+    #配置访问限制速度
+    throttle_classes = (UserRateThrottle,AnonRateThrottle)
     serializer_class = GoodsSerializer
     pagination_class = GoodsListViewPagination
     # 配置过滤数据的方法

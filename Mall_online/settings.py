@@ -168,6 +168,16 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.BasicAuthentication',
                                        'rest_framework.authentication.SessionAuthentication',
                                        ),
+
+    # 配置THROTTLE，限制访问速度
+    'DEFAULT_THROTTLE_CLASSES': ('rest_framework.throttling.AnonRateThrottle',#未登陆用户
+                                 'rest_framework.throttling.UserRateThrottle',#登陆用户
+                                 ),
+
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '3/minute',#每分钟可以请求两次
+        'user': '5/minute',#每分钟可以请求五次
+    }
 }
 
 # JWT_AUTH的相关配置
@@ -187,3 +197,22 @@ API_KEY = '你申请时候的apikey'
 # 支付宝相关配置
 private_key_path = os.path.join(BASE_DIR,'apps/transaction/keys/private_2048.txt')
 ali_pub_key_path = os.path.join(BASE_DIR,'apps/transaction/keys/alipay_key_2048.txt')
+
+
+# DRF缓存的相关配置
+REST_FRAMEWORK_EXTENSIONS = {
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 5 #配置缓存失效时间为5秒
+}
+
+# 配置redis缓存的相关设置
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": "redis://127.0.0.1:6379/1",
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+#         }
+#     }
+# }
+
+

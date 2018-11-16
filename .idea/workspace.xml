@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4edab564-bc29-4c2e-aa02-7823e554584e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/operations/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mall_online/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mall_online/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/operations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/operations/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/transaction/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/transaction/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,16 +55,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="21708" />
+          <entry key="py" value="21856" />
           <entry key="py@Mall_online" value="384" />
-          <entry key="txt" value="762" />
+          <entry key="txt" value="903" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CommandLine" value="293" />
-          <entry key="PLAIN_TEXT" value="853" />
-          <entry key="Python" value="21708" />
+          <entry key="PLAIN_TEXT" value="994" />
+          <entry key="Python" value="21856" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,7 +72,7 @@
           <entry key="config" value="8" />
           <entry key="css" value="4" />
           <entry key="json" value="2" />
-          <entry key="py" value="465" />
+          <entry key="py" value="466" />
           <entry key="sql" value="2" />
           <entry key="txt" value="5" />
         </counts>
@@ -86,7 +82,7 @@
           <entry key="CSS" value="4" />
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="465" />
+          <entry key="Python" value="466" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -97,18 +93,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+            <state relative-caret-position="103">
+              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-                <element signature="e#741#870#0" />
-                <element signature="e#1083#1950#0" />
                 <element signature="e#1642#1879#0" />
-                <marker date="1542350473625" expanded="false" signature="2738:2739" ph="..." />
-                <marker date="1542350473625" expanded="false" signature="2977:2978" ph="..." />
+                <marker date="1542358800093" expanded="false" signature="2884:2885" ph="..." />
+                <marker date="1542358800093" expanded="false" signature="3123:3124" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mall_online/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="215" column="3" lean-forward="true" selection-start-line="215" selection-start-column="3" selection-end-line="215" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#310#1" />
+                <element signature="e#312#321#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,7 +202,6 @@
         <option value="$PROJECT_DIR$/apps/transaction/keys/alipay_key_2048.txt" />
         <option value="$PROJECT_DIR$/apps/utils/alipay.py" />
         <option value="$PROJECT_DIR$/apps/transaction/models.py" />
-        <option value="$PROJECT_DIR$/Mall_online/settings.py" />
         <option value="$PROJECT_DIR$/apps/goods/filters.py" />
         <option value="$PROJECT_DIR$/Mall_online/urls.py" />
         <option value="$PROJECT_DIR$/apps/goods/models.py" />
@@ -208,6 +214,7 @@
         <option value="$PROJECT_DIR$/apps/operations/signals.py" />
         <option value="$PROJECT_DIR$/apps/transaction/views.py" />
         <option value="$PROJECT_DIR$/apps/goods/views.py" />
+        <option value="$PROJECT_DIR$/Mall_online/settings.py" />
       </list>
     </option>
   </component>
@@ -624,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542264441243</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Complete shopping cart update logic when doing updating goods numbers in shopping cart, including delete and adding.">
+      <created>1542350915722</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1542350915722</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -648,7 +662,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32871014" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49928468" weight="0.48472223" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.49928468" visible="true" weight="0.48472223" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32871014" />
@@ -692,7 +706,8 @@
     <MESSAGE value="add ShoppingCartViewSet/ShoppingCartSerializer/ShoppingCartUrl" />
     <MESSAGE value="complete alipay" />
     <MESSAGE value="complete banner's display and new product display and goods/brands display on Index page" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete banner's display and new product display and goods/brands display on Index page" />
+    <MESSAGE value="Complete shopping cart update logic when doing updating goods numbers in shopping cart, including delete and adding." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete shopping cart update logic when doing updating goods numbers in shopping cart, including delete and adding." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -946,17 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Mall_online/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="144" column="3" lean-forward="true" selection-start-line="144" selection-start-column="3" selection-end-line="144" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#310#1" />
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/goods/filters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
@@ -1139,15 +1143,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state relative-caret-position="103">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <element signature="e#741#870#0" />
-            <element signature="e#1083#1950#0" />
             <element signature="e#1642#1879#0" />
-            <marker date="1542350473625" expanded="false" signature="2738:2739" ph="..." />
-            <marker date="1542350473625" expanded="false" signature="2977:2978" ph="..." />
+            <marker date="1542358800093" expanded="false" signature="2884:2885" ph="..." />
+            <marker date="1542358800093" expanded="false" signature="3123:3124" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mall_online/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="215" column="3" lean-forward="true" selection-start-line="215" selection-start-column="3" selection-end-line="215" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#310#1" />
+            <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
